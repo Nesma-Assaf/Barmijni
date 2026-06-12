@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برمجني</title>
+    <!-- ربط ملف CSS الرئيسي للموقع -->
+    <link rel="stylesheet" href="style.css"/>
+    <!-- ربط ملف CSS الخاص بنماذج التسجيل والدخول -->
+    <link rel="stylesheet" href="usersAuthStyle.css"/>
+</head>
+<body>
+<!-- قسم الرأس (HEADER) - يحتوي على شعار الموقع والقائمة الرئيسية -->
+<header class="header">
+    <!-- زر "سجل الآن" يؤدي إلى صفحة التسجيل الجديد -->
+    <div class="nav-btn">
+        <a href="register.html" class="btn-register">سجل الآن</a>
+    </div>
+    <!-- شريط القائمة الرئيسية للموقع -->
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+            <li><a href="index.html"> الرئيسية</a></li>
+                <li><a href="paths.html">مسارات</a></li>
+                <li><a href="courses.html">دورات</a></li>
+                <li><a href="articles.html">مقالات</a></li>
+                <li><a href="books.html">كتب</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- شعار برمجني -->
+    <div class="logo">
+        <img src="images/icons/لوجو برمجني 2.svg" alt="برمجني">
+    </div>
+</header>
+
+<section class="auth-section">
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2 class="auth-title">تسجيل الدخول</h2>
+                        <form class="auth-form">
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="البريد الإلكتروني أو اسم المستخدم" required>
+                </div>
+                                <div class="form-group">
+                    <!-- غلاف حقل كلمة المرور والزر -->
+                    <div class="password-input-wrapper">
+                        <!-- حقل الإدخال لكلمة المرور -->
+                        <input type="password" class="form-input password-input" placeholder="كلمة المرور" required>
+                        <!-- زر إظهار/إخفاء كلمة المرور -->
+
+                        <button type="button" class="toggle-password">
+<img src="images/icons/eye.png"/>
+</button>
+                    </div>
+                </div>
+                
+                <!-- خيارات النموذج (تذكرني - نسيت كلمة المرور) -->
+                <div class="form-options">
+                    <!-- خيار تذكر بيانات المستخدم -->
+                    <label class="remember-me">
+                        <input type="checkbox"> تذكرني
+                    </label>
+                    <!-- رابط نسيان كلمة المرور يؤدي إلى صفحة الاسترجاع -->
+                    <a href="passwordrecover.html" class="forgot-password">نسيت كلمة المرور؟</a>
+                </div>
+                
+                <!-- زر تسجيل الدخول الرئيسي -->
+                <button type="submit" class="auth-btn">تسجيل الدخول</button>
+            </form>
+            
+            <!-- تذييل النموذج - رابط للتسجيل الجديد -->
+              <div class="auth-footer">
+                <p>ليس لديك حساب؟</p>
+                <p><a href="register.html">تسجيل جديد</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- قسم التذييل (FOOTER) - يحتوي على معلومات الموقع والشبكات الاجتماعية -->
+<footer class="main-footer">
+    <!-- حاوية التذييل الرئيسية -->
+    <div class="footer-container">
+        <!-- قسم الشعار في التذييل -->
+        <div class="footer-logo-section">
+            <img src="images/icons/لوجو برمجني 2.svg" alt="لوجو برمجني" class="footer-logo">
+        </div>
+
+        <!-- قسم المحتوى والشبكات الاجتماعية في التذييل -->
+        <div class="footer-content-section">
+            <h3 class="footer-title">هدف الموقع</h3>
+            <p class="footer-description">
+                برمجني هو موقع تعليمي مجاني يهتم بعلوم الكمبيوتر و يقدم إليك المعرفة بشكل مبسّط و مفصّل، 
+                و هو المكان المناسب لأي شخص يطمح بأن يصبح مبرمجاً محترفاً و مبدعاً في العالم الرقمي.
+            </p>
+            
+            <!-- روابط الشبكات الاجتماعية -->
+            <div class="social-icons">
+                <a href="#" class="icon-link"><img src="images/icons/email.svg" alt="Email"></a>
+                <a href="#" class="icon-link"><img src="images/icons/youtube-9.svg" alt="YouTube"></a>
+                <a href="#" class="icon-link"><img src="images/icons/telegram-4.svg" alt="Telegram"></a>
+                <a href="#" class="icon-link"><img src="images/icons/facebook-4.svg" alt="Facebook"></a>
+                <a href="#" class="icon-link"><img src="images/icons/whatsapp-4.svg" alt="WhatsApp"></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- سكريبت JavaScript لوظائف الصفحة -->
+<script>
+    // اختيار جميع أزرار إظهار/إخفاء كلمة المرور في الصفحة
+    document.querySelectorAll('.toggle-password').forEach(button => {
+        // إضافة مستمع حدث عند النقر على زر إظهار/إخفاء
+        button.addEventListener('click', function(e) {
+            e.preventDefault(); // منع السلوك الافتراضي للزر
+            
+            // الحصول على حقل كلمة المرور المرتبط بهذا الزر
+            const passwordInput = this.parentElement.querySelector('.password-input');
+            // الحصول على أيقونة العين
+            const icon = this.querySelector('i');
+            
+            // التحقق من نوع الإدخال الحالي
+            if (passwordInput.type === 'password') {
+                // إذا كان مخفي، اظهره
+                passwordInput.type = 'text';
+                // تغيير أيقونة العين من 'eye' إلى 'eye-slash'
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                // وإلا، أخفه
+                passwordInput.type = 'password';
+                // تغيير أيقونة العين من 'eye-slash' إلى 'eye'
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    });
+</script>
+</body>
+</html>

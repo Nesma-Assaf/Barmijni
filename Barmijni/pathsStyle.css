@@ -1,0 +1,257 @@
+/* تعريف الخط */
+@font-face {
+    font-family: 'Noto Kufi Arabic';
+    src: url('fonts/Noto_Kufi_Arabic/static/NotoKufiArabic-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Noto Kufi Arabic';
+    src: url('fonts/Noto_Kufi_Arabic/static/NotoKufiArabic-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* HEADER */
+.header {
+     background:  #087d8C;
+    color: white;
+    padding: 10px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-right: 25px;
+}
+
+.navbar {
+        display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+      flex-direction: row-reverse;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+   font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+
+.btn-register {
+    background-color: white;
+    color: #1a8a99;
+    border-radius: 20px;
+    padding: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 9cap;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+/* PATH SECTION */
+
+.paths {
+padding-top: 60px;  
+padding-bottom: 60px;
+  background-color: white;
+    color: #1a8a99;
+    text-align: center;
+}
+
+.paths h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* 1. حاوية شبكة الكروت الرئيسية */
+.paths-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+    gap: 60px; 
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.path-card {
+    width: 110%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-color: transparent;
+    border: 2px solid #1a8a99;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 10px rgba(155, 181, 185, 0.973);
+
+
+}
+
+.path-card img {
+    width: 120px;
+    height: 140px;
+    display: block;
+    filter: brightness(0) invert(1);
+    margin: 0;
+}
+
+.card-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.path-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    direction: rtl;
+}
+.start-btn {
+    width: 100%;
+    background-color: #1a8a99;
+    color: white;
+    border-radius: 20px;
+    padding: 12px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.card-top {
+    background-color: #1a8a99;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bottom {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* تنسيق حاوية الفوتر الرئيسية */
+.main-footer {
+
+    background:  #087d8C;
+    color: #ffffff; /* لون النص أبيض */
+    padding: 60px; /* مسافة داخلية من الأعلى والأسفل والجوانب */
+    direction: rtl; /* جعل اتجاه النص وقراءة العناصر من اليمين إلى اليسار */
+}
+
+/* توزيع العناصر بشكل مرن داخل الفوتر */
+.footer-container {
+    margin: 0 auto; /* توسيط الحاوية في منتصف الشاشة */
+    display: flex; /* تفعيل نظام الـ Flexbox لتوزيع الأقسام */
+    justify-content: center; /* تقريب الأقسام من بعضها */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+    flex-wrap: wrap; /* السماح للعناصر بالنزول لسطر جديد على الشاشات الصغيرة (تجاوب) */
+    gap: 20px; /* مسافة أمان أصغر بين قسم اللوجو وقسم النصوص */
+
+}
+
+/* تنسيق قسم الشعار */
+.footer-logo-section {
+    display: flex;
+    flex-direction: column; /* ترتيب اللوجو والاسم عمودياً فوق بعضهما */
+    align-items: flex-end; /* توسيط اللوجو والاسم معاً */
+    min-width: auto;
+}
+
+/* التحكم بحجم اللوجو */
+.footer-logo {
+    width: 150px; /* تحديد عرض مناسب للشعار */
+    height: 150px; /* تحديد ارتفاع مناسب للشعار */
+    margin-bottom: 10px; /* مسافة بين الشعار والاسم تحته */
+}
+
+
+
+/* تنسيق عنوان "هدف الموقع" */
+.footer-title {
+    font-size: 28px; /* خط كبير وعريض للعنوان */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* تنسيق النص التعريفي */
+.footer-description {
+    font-size: 18px;
+    line-height: 1.6; /* زيادة التباعد بين الأسطر لراحة العين أثناء القراءة */
+    color: #e0f2f1; /* لون أبيض مائل للفيروزي الفاتح جداً ليعطي مظهراً مريحاً */
+    margin-bottom: 25px;
+    max-width: 800px; /* منع النص من التمدد بشكل مفرط أفقياً */
+}
+
+/* تنسيق حاوية الأيقونات */
+.social-icons {
+    display: flex;
+    gap: 15px; /* المسافة الأفقية بين كل أيقونة وأخرى */
+}
+
+/* تنسيق روابط الأيقونات وتأثير المرور (Hover) */
+.icon-link img {
+    width: 35px; /* حجم الأيقونات الدائرية المرفقة */
+    height: 35px;
+    transition: transform 0.2s ease; /* إضافة تأثير حركة ناعم عند مرور الماوس */
+}
+
+.icon-link :hover {
+    transform: scale(1.1); /* تكبير الأيقونة قليلاً بنسبة 10% عند تمرير الماوس */
+}

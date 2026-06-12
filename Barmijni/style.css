@@ -1,0 +1,536 @@
+/* تعريف الخط */
+@font-face {
+    font-family: 'Noto Kufi Arabic';
+    src: url('fonts/Noto_Kufi_Arabic/static/NotoKufiArabic-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Noto Kufi Arabic';
+    src: url('fonts/Noto_Kufi_Arabic/static/NotoKufiArabic-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* HEADER */
+.header {
+     background:  #087d8C;
+    color: white;
+    padding: 10px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-right: 25px;
+}
+
+.navbar {
+        display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+      flex-direction: row-reverse;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+   font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+
+.btn-register {
+    background-color: white;
+    color: #1a8a99;
+    border-radius: 20px;
+    padding: 10px;
+    padding-right: 18px;
+    padding-left: 18px;
+    margin-left: 9cap;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* HERO */
+.hero {
+    background-color: #f8f8f8;
+    color: #1a8a99;
+  padding: 60px 0px 0px 0px;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.hero-content {
+    flex: 0 0 45%;
+    text-align: right;
+    margin-left: 100px;
+        align-items: center;
+
+}
+
+.hero-image {
+    flex: 0 0 45%;
+    text-align: center;
+}
+
+.hero-content h6 {
+    font-size: 55px;
+    margin-bottom: 12px;
+    color: #0f5a63;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #1a8a99;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.hero-desc {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.hero-content h4 {
+    font-size: 20px;
+    color: #1a8a99;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    background-color: #1a8a99;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+        margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #0f5a63;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 700px;
+    height: 400px;
+}
+
+/* SVG Divider */
+.hero-divider{
+  display:block;
+  bottom: -1px; /* يضمن تداخل بسيط مع القسم التالي */
+  pointer-events: none; /* لا يعيق النقرات */
+    z-index: 2;
+      height: var(--divider-height);
+}
+
+/* PATHS SECTION */
+.paths {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #1a8a99;
+    color: white;
+    text-align: center;
+}
+
+.paths h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.paths-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    direction: rtl;
+}
+
+.path-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.path-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.path-card img {
+    width: 120px;
+    height: 140px;
+    margin: 0 auto 20px;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.card-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.path-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    direction: rtl;
+}
+
+
+/* COURSES SECTION */
+.courses {
+    padding: 80px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #1a8a99;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    direction: rtl;
+}
+
+.course-card {
+    background-color: #b3e5e1;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(26, 138, 153, 0.2);
+}
+
+.course-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.course-icon {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1a8a99;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-weight: bold;
+        color: #1a8a99;
+font-size: 16px;
+}
+
+/* BOOKS SECTION */
+.books {
+    padding: 90px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.books h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    direction: rtl;
+}
+
+.book-card {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 60px 21px;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(15, 145, 162, 0.973);
+}
+
+.book-card img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.book-cover {
+    font-size: 60px;
+}
+
+.book-card p {
+font-size: 14px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+
+
+/* ARTICLES SECTION */
+.articles {
+padding-top: 80px;  
+padding-bottom: 100px;
+  background-color: #1a8a99;
+    color: white;
+}
+
+.articles h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.article-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 15px;
+    gap: 40px;
+    flex-direction: row-reverse;
+    align-items: center;
+    box-shadow: #666 0px 4px 10px;
+}
+
+.article-content {
+    flex: 1;
+    text-align: right;
+    direction: rtl;
+}
+
+.article-content h3 {
+    margin-bottom: 15px;
+    color: #1a8a99;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.article-content p {
+    margin-bottom: 18px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.article-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.tag {
+    background-color: #999;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.article-image {
+    width: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #2c3e50;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+button.articles-btn {
+    display: block;
+    width: 250px;
+    margin: 50px auto 0;
+    padding: 18px 30px;
+    background-color: white;
+    color: #0f5a63;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button.articles-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* تنسيق حاوية الفوتر الرئيسية */
+.main-footer {
+     background:  #087d8C;
+    color: #ffffff; /* لون النص أبيض */
+    padding: 60px 20px; /* مسافة داخلية من الأعلى والأسفل والجوانب */
+    direction: rtl; /* جعل اتجاه النص وقراءة العناصر من اليمين إلى اليسار */
+}
+
+/* توزيع العناصر بشكل مرن داخل الفوتر */
+.footer-container {
+    margin: 0 auto; /* توسيط الحاوية في منتصف الشاشة */
+    display: flex; /* تفعيل نظام الـ Flexbox لتوزيع الأقسام */
+    justify-content: center; /* تقريب الأقسام من بعضها */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+    flex-wrap: wrap; /* السماح للعناصر بالنزول لسطر جديد على الشاشات الصغيرة (تجاوب) */
+    gap: 20px; /* مسافة أمان أصغر بين قسم اللوجو وقسم النصوص */
+
+}
+
+/* تنسيق قسم الشعار */
+.footer-logo-section {
+    display: flex;
+    flex-direction: column; /* ترتيب اللوجو والاسم عمودياً فوق بعضهما */
+    align-items: flex-end; /* توسيط اللوجو والاسم معاً */
+    min-width: auto;
+}
+
+/* التحكم بحجم اللوجو */
+.footer-logo {
+    width: 150px; /* تحديد عرض مناسب للشعار */
+    height: 150px; /* تحديد ارتفاع مناسب للشعار */
+    margin-bottom: 10px; /* مسافة بين الشعار والاسم تحته */
+}
+
+
+
+/* تنسيق عنوان "هدف الموقع" */
+.footer-title {
+    font-size: 28px; /* خط كبير وعريض للعنوان */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* تنسيق النص التعريفي */
+.footer-description {
+    font-size: 18px;
+    line-height: 1.6; /* زيادة التباعد بين الأسطر لراحة العين أثناء القراءة */
+    color: #e0f2f1; /* لون أبيض مائل للفيروزي الفاتح جداً ليعطي مظهراً مريحاً */
+    margin-bottom: 25px;
+    max-width: 800px; /* منع النص من التمدد بشكل مفرط أفقياً */
+}
+
+/* تنسيق حاوية الأيقونات */
+.social-icons {
+    display: flex;
+    gap: 15px; /* المسافة الأفقية بين كل أيقونة وأخرى */
+}
+
+/* تنسيق روابط الأيقونات وتأثير المرور (Hover) */
+.icon-link img {
+    width: 35px; /* حجم الأيقونات الدائرية المرفقة */
+    height: 35px;
+    transition: transform 0.2s ease; /* إضافة تأثير حركة ناعم عند مرور الماوس */
+}
+
+.icon-link :hover {
+    transform: scale(1.1); /* تكبير الأيقونة قليلاً بنسبة 10% عند تمرير الماوس */
+}
+
+
